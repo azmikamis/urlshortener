@@ -8,6 +8,8 @@ REST service with 2 resources:
 
 2. expand: takes a shortened url as input and outputs the original url
 
+A map is used as an in-memory cache to store the urls
+
 Note:
 
 Usually a base 62 conversion is used as a hash to identify the orignal url. For this small script, there is no conversion used.
