@@ -1,0 +1,24 @@
+Design
+
+Requirements:
+
+REST service with 2 resources:
+
+1. shorten: takes a url as input and outputs a shortened url
+
+2. expand: takes a shortened url as input and outputs the original url
+
+Note:
+
+Usually a base 62 conversion is used as a hash to identify the orignal url. For this small script, there is no conversion used.
+A simple counter is used to identify each url
+
+Assumptions:
+
+There is no check on the inputs for a valid url
+There is no check for existing url for expand. An empty response will indicate the shortened url does not exist
+
+Challenges
+
+1. Concurrency was an issue but it can be resolved natively by Go using mutex
+2. Using a 3rd party curl program to run in windows command prompt gave different results
